@@ -18,4 +18,8 @@ Download and activate the plugin. When managing field groups you will see a new 
 Select Yes to enable the fancy repeater user interface.  
 The first field in your repeater fields will be used as the title shown when the repeater section is collapsed 
 
+Repeater Closed - This is what the interface will look like by default when editing a post with a fancy repeater field. 
 ![ScreenShot](https://raw.github.com/lucasstark/acf-fancy-repeater-field/master/assets/img/example/fancy-repeater-closed.png)
+
+Repeater Open
+![ScreenShot](https://raw.github.com/lucasstark/acf-fancy-repeater-field/master/assets/img/example/fancy-repeater-open.png)
