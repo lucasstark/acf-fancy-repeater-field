@@ -46,7 +46,7 @@
 			});
 			
 			var titlefieldkey = this.o.titlefieldkey;
-			this.$field.on('keyup', 'div[data-key="' + titlefieldkey + '"] input', function( e ){
+			this.$field.on('keyup', '[data-key="' + titlefieldkey + '"] input', function( e ){
 				self.update_child_title_label( $(this) );
 			});
 			
