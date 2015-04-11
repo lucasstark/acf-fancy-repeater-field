@@ -22,4 +22,4 @@ Repeater Closed - This is what the interface will look like by default when edit
 ![ScreenShot](https://raw.github.com/lucasstark/acf-fancy-repeater-field/master/assets/img/example/fancy-repeater-closed.png)
 
 Repeater Open
-![ScreenShot](https://raw.github.com/lucasstark/acf-fancy-repeater-field/master/assets/img/example/fancy-repeater-open.png)
+![ScreenShot](https://raw.github.com/lucasstark/acf-fancy-repeater-field/master/assets/img/example/fancy-repeater-open.jpg)
