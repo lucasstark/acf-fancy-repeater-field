@@ -13,7 +13,7 @@ This field adds an option to repeater fields to show in "Fancy Format".  When se
 
 Any time you have a repeater with many items, or many fields this will help reduce the overall length of the post editing screen. 
 
-How to use
+How to use: 
 Download and activate the plugin. When managing field groups you will see a new setting field for the repeater called "Fancy Repeater".   
 Select Yes to enable the fancy repeater user interface.  
 The first field in your repeater fields will be used as the title shown when the repeater section is collapsed 
