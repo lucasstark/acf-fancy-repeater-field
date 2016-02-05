@@ -1,6 +1,6 @@
 (function ($) {
 
-	acf.fields.fancyrepeater = acf.field.extend({
+	window.acf.fields.fancyrepeater = window.acf.field.extend({
 		type: 'fancyrepeater',
 		$el: null,
 		$input: null,
@@ -42,7 +42,10 @@
 			
 			this.$field.on('click', '.edit-field', function (e) {
 				e.preventDefault();
+				e.stopPropagation();
 				self.edit_field( $(this).closest('div.acf-fancyrepeater-object') );
+				return false;
+				
 			});
 			
 			var titlefieldkey = this.o.titlefieldkey;
