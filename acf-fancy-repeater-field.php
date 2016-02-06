@@ -49,11 +49,10 @@ class ACF_Fancy_Repeater {
 
 	public function on_admin_enqueue_scripts() {
 		$dir = plugin_dir_url( __FILE__ );
-
+		
 		// register & include JS
-		wp_register_script( 'acf-input-fancy-repeater-field', "{$dir}assets/js/acf-fancy-repeater-field-v5.js" );
-		wp_enqueue_script( 'acf-input-fancy-repeater-field' );
-
+		wp_enqueue_script( 'acf-input-fancy-repeater-field', "{$dir}assets/js/acf-fancy-repeater-field-v5.js", array('acf-input'), '1.0.0', true );
+		
 
 		// register & include CSS
 		wp_register_style( 'acf-input-fancy-repeater-field', "{$dir}assets/css/acf-fancy-repeater-field-v5.css" );

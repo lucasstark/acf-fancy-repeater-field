@@ -47,9 +47,9 @@ class ACF_Fancy_Repeater_Field_V5 {
 
 	public function load_field( $field ) {
 		global $post;
-		
+
 		$field['use_fancy_repeater'] = isset( $field['use_fancy_repeater'] ) ? $field['use_fancy_repeater'] : 'no';
-		if ( empty($post) || ( $post && $post->post_type != 'acf-field-group' ) ) {
+		if ( empty( $post ) || ( $post && $post->post_type != 'acf-field-group' ) ) {
 			$field['use_fancy_repeater'] = isset( $field['use_fancy_repeater'] ) ? $field['use_fancy_repeater'] : 'no';
 			$field['forced_fancy_repeater'] = false;
 			if ( $field['use_fancy_repeater'] == 'yes' ) {
@@ -57,7 +57,7 @@ class ACF_Fancy_Repeater_Field_V5 {
 				$field['forced_fancy_repeater'] = true;
 			}
 		}
-		
+
 		return $field;
 	}
 
@@ -72,7 +72,7 @@ class ACF_Fancy_Repeater_Field_V5 {
 		    'name' => 'use_fancy_repeater',
 		    'layout' => 'horizontal',
 		    'default_value' => 'no',
-		    'value' => isset($field['use_fancy_repeater']) ? $field['use_fancy_repeater'] : 'no',
+		    'value' => isset( $field['use_fancy_repeater'] ) ? $field['use_fancy_repeater'] : 'no',
 		    'choices' => array(
 			'yes' => __( 'Yes', 'acf' ),
 			'no' => __( 'No', 'acf' )
@@ -130,11 +130,12 @@ class ACF_Fancy_Repeater_Field_V5 {
 
 		// populate the empty row data (used for acfcloneindex and min setting)
 		$empty_row = array();
-
-		foreach ( $field['sub_fields'] as $f ) {
-
-			$empty_row[$f['key']] = isset( $f['default_value'] ) ? $f['default_value'] : false;
+		if ( isset( $field['sub_fields'] ) && !empty( $field['sub_fields'] ) ) {
+			foreach ( $field['sub_fields'] as $f ) {
+				$empty_row[$f['key']] = isset( $f['default_value'] ) ? $f['default_value'] : false;
+			}
 		}
+
 
 
 		// If there are less values than min, populate the extra values
@@ -258,7 +259,11 @@ class ACF_Fancy_Repeater_Field_V5 {
 	}
 
 	private function get_title_field_key( $field ) {
-		return $field['sub_fields'][0]['key'];
+		if ( isset( $field['sub_fields'] ) ) {
+			return $field['sub_fields'][0]['key'];
+		} else {
+			return '';
+		}
 	}
 
 }

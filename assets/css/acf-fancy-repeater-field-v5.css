@@ -22,7 +22,7 @@
   padding-right: 0 !important;
 }
 .acf-field-fancyrepeater .li-fancyrepeater-label {
-  width: 28%;
+  width: 78%;
 }
 .acf-field-fancyrepeater .li-fancyrepeater-name, .acf-field-fancyrepeater .li-fancyrepeater-type {
   width: 25%;
@@ -119,6 +119,7 @@
 }
 .acf-field-fancyrepeater .acf-fancyrepeater-object.open > .handle .acf-icon {
   border-color: #fff;
+  color:#fff;
 }
 .acf-field-fancyrepeater .acf-fancyrepeater-object .settings {
   display: none;
@@ -145,5 +146,11 @@
 .acf-fancyrepeater-field-hide {
   display: none;
 }
+
+
+.acf-field-fancyrepeater .acf-table > tbody > tr > td.order {
+	display:none;
+}
+
 
 /*# sourceMappingURL=acf-fancy-repeater-field-v5.css.map */
