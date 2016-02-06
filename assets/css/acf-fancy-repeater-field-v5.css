@@ -152,5 +152,9 @@
 	display:none;
 }
 
+.acf-field-fancyrepeater .acf-table.table-layout > tbody > tr > td.order {
+	display:block;
+}
+
 
 /*# sourceMappingURL=acf-fancy-repeater-field-v5.css.map */
