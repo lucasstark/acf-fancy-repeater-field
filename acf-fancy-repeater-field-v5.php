@@ -53,10 +53,10 @@ class ACF_Fancy_Repeater_Field_V5 {
 			$field['use_fancy_repeater'] = isset( $field['use_fancy_repeater'] ) ? $field['use_fancy_repeater'] : 'no';
 			$field['forced_fancy_repeater'] = false;
 			if ( $field['use_fancy_repeater'] == 'yes' ) {
-                                //only change the field type if we aren't exporting
-                                if( sanitize_text_field( $_REQUEST['page'] ) != 'acf-settings-tools' ) {
-                                        $field['type'] = 'fancyrepeater';
-                                }
+				//only change the field type if we aren't exporting
+				if( !isset($_REQUEST['page']) || ( sanitize_text_field( $_REQUEST['page'] ) != 'acf-settings-tools' ) ) {
+					$field['type'] = 'fancyrepeater';
+				}
 				$field['forced_fancy_repeater'] = true;
 			}
 		}
